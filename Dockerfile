@@ -1,5 +1,5 @@
 # الانتقال لنسخة slim لدعم المتصفحات بشكل أفضل
-FROM ghcr.io/astral-sh/uv:python3.11-slim
+FROM ghcr.io/astral-sh/uv:python3.11-bookworm-slim
 
 ENV ENV_MODE production
 WORKDIR /app
