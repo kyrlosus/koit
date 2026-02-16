@@ -35,5 +35,5 @@ COPY . .
 ENV PYTHONPATH=/app
 EXPOSE 8000
 
-# تصحيح الـ Entrypoint بناءً على هيكل مجلداتك (backend.api:app)
-CMD ["sh", "-c", "uv run gunicorn backend.api:app -w ${WORKERS:-4} -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000 --timeout ${TIMEOUT:-75} --graceful-timeout 30 --keep-alive 65"]
+# تصحيح الـ Entrypoint بناءً على هيكل مجلداتك (api:app)
+CMD ["sh", "-c", "uv run gunicorn api:app -w ${WORKERS:-4} -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000 --timeout ${TIMEOUT:-75} --graceful-timeout 30 --keep-alive 65"]
